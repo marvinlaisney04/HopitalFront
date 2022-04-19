@@ -1,0 +1,61 @@
+<div class="app">
+    <div class="container header">
+        <h1>Créer un nouveau <span>patient</span></h1>
+        <img src="../../assets/images/nouveau_patient.svg" alt="Nouveau patient" />
+    </div>
+    <div class="container main-content">
+        <form name="nouveauPatient" method="post">
+
+            <div class="form-group">
+                <div class="formFirstName inputGroup">
+                    <label for="firstName">Prénom</label>
+                    <input id="firstName" type="text" name="firstName" placeholder="Prénom" />
+                </div>
+                <div class="formLastName inputGroup">
+                    <label for="lastName">Nom de famille</label>
+                    <input id="lastName" type="text" name="lastName" placeholder="Nom de famille" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="formTelephone inputGroup">
+                    <label for="telephone">Numéro de téléphone</label>
+                    <input id="telephone" type="text" name="telephone" placeholder="Téléphone" />
+                </div>
+                <div class="formNumSecu inputGroup">
+                    <label for="numSecu">Numéro de sécurité sociale</label>
+                    <input id="numSecu" type="text" name="numSecu" placeholder="Numéro de sécurité sociale" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="formAdresse inputGroup">
+                    <label for="adresse">Adresse</label>
+                    <input id="adresse" type="text" name="adresse" placeholder="Adresse" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="formCodePostal inputGroup">
+                    <label for="codePostal">Code Postal</label>
+                    <input id="codePostal" type="text" name="codePostal" placeholder="Code postal" />
+                </div>
+                <div class="formVille inputGroup">
+                    <label for="ville">Ville</label>
+                    <input id="ville" type="text" name="ville" placeholder="Ville" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="formSexe inputGroup">
+                    <label for="sexe">Sexe</label>
+                    <select id="sexe" name="formSexe">
+                        <option></option>
+                        <option>M.</option>
+                        <option>Mme.</option>
+                    </select>
+                </div>
+                <div class="formNaissance inputGroup">
+                    <label for="dateNaissance">Date de naissance</label>
+                    <input id="dateNaissance" type="text" name="dateNaissance" placeholder="Date de naissance" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

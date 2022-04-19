@@ -6,13 +6,19 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
+import { FichePatientComponent } from './fiche-patient/fiche-patient.component';
+import { NouveauPatientComponent } from './nouveau-patient/nouveau-patient.component';
+import { PatientsComponent } from './patients/patients.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    FichePatientComponent,
+    NouveauPatientComponent,
+    PatientsComponent
   ],
   imports: [
     BrowserModule,

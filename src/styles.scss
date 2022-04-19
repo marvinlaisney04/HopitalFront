@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 $navy: #051367;
 $blue: #2D31FA;
@@ -17,6 +18,8 @@ body {
             "main main main main main main main main main main main main"
             "footer footer footer footer footer footer footer footer footer footer footer footer";
         grid-template-rows: 80px 1fr 150px;
+        background-color: $wedding;
+        grid-gap: 50px;
 
         app-navbar {
             grid-area: nav;
@@ -25,16 +28,17 @@ body {
         }
 
         main {
-            // height: 100vh;
             grid-area: main;
-            overflow: auto;
-            background-color: $wedding;
+
+            h1 span{
+                color: $blue;
+            }
         }
 
         app-footer {
             grid-area: footer;
             background-color: navy;
-            position: sticky;
+            // position: sticky;
         }
 
         app-navbar,
@@ -47,6 +51,7 @@ body {
         .container {
             display: grid;
             grid-template-columns: repeat(12, 1fr);
+            grid-column: 3 / 11;
         }
     }
 }
