@@ -1,1 +1,73 @@
 /* You can add global styles to this file, and also import other style files */
+
+$navy: #051367;
+$blue: #2D31FA;
+$cold: #5D8BF4;
+$winter: #5D8BF4;
+$wedding: #DFF6FF;
+
+body {
+    margin: 0;
+
+    app-root {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-areas:
+            "nav nav nav nav nav nav nav nav nav nav nav nav"
+            "main main main main main main main main main main main main"
+            "footer footer footer footer footer footer footer footer footer footer footer footer";
+        grid-template-rows: 80px 1fr 150px;
+
+        app-navbar {
+            grid-area: nav;
+            background-color: navy;
+            position: sticky;
+        }
+
+        main {
+            // height: 100vh;
+            grid-area: main;
+            overflow: auto;
+            background-color: $wedding;
+        }
+
+        app-footer {
+            grid-area: footer;
+            background-color: navy;
+            position: sticky;
+        }
+
+        app-navbar,
+        app-footer {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: white;
+            font-weight: bold;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+        }
+    }
+}
+
+
+//  /* Extra Small Devices, Phones */ 
+//  @media only screen and (min-width : 480px) {
+
+// }
+
+// /* Small Devices, Tablets */
+// @media only screen and (min-width : 768px) {
+
+// }
+
+// /* Medium Devices, Desktops */
+// @media only screen and (min-width : 992px) {
+
+// }
+
+// /* Large Devices, Wide Screens */
+// @media only screen and (min-width : 1200px) {
+
+// }
