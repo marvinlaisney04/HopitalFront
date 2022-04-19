@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { FichePatientComponent } from './fiche-patient/fiche-patient.component';
 import { NouveauPatientComponent } from './nouveau-patient/nouveau-patient.component';
 import { PatientsComponent } from './patients/patients.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { PatientsComponent } from './patients/patients.component';
     PatientsComponent
   ],
   imports: [
+    ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule
   ],

@@ -4,48 +4,48 @@
         <img src="../../assets/images/nouveau_patient.svg" alt="Nouveau patient" />
     </div>
     <div class="container main-content">
-        <form name="nouveauPatient" method="post">
+        <form [formGroup]="formNouveauPatient" name="nouveauPatient" method="post">
 
             <div class="form-group">
                 <div class="formFirstName inputGroup">
                     <label for="firstName">Prénom</label>
-                    <input id="firstName" type="text" name="firstName" placeholder="Prénom" />
+                    <input formControlName="firstName" id="firstName" type="text" name="firstName" placeholder="Jean" />
                 </div>
                 <div class="formLastName inputGroup">
                     <label for="lastName">Nom de famille</label>
-                    <input id="lastName" type="text" name="lastName" placeholder="Nom de famille" />
+                    <input formControlName="lastName" id="lastName" type="text" name="lastName" placeholder="Louis" />
                 </div>
             </div>
             <div class="form-group">
                 <div class="formTelephone inputGroup">
                     <label for="telephone">Numéro de téléphone</label>
-                    <input id="telephone" type="text" name="telephone" placeholder="Téléphone" />
+                    <input formControlName="telephone" id="telephone" type="text" name="telephone" placeholder="0245693215" />
                 </div>
                 <div class="formNumSecu inputGroup">
                     <label for="numSecu">Numéro de sécurité sociale</label>
-                    <input id="numSecu" type="text" name="numSecu" placeholder="Numéro de sécurité sociale" />
+                    <input formControlName="numSecu" id="numSecu" type="text" name="numSecu" placeholder="1 12 548 652 45 78 02" />
                 </div>
             </div>
             <div class="form-group">
                 <div class="formAdresse inputGroup">
                     <label for="adresse">Adresse</label>
-                    <input id="adresse" type="text" name="adresse" placeholder="Adresse" />
+                    <input formControlName="adresse" id="adresse" type="text" name="adresse" placeholder="30 Place Saint Charles" />
                 </div>
             </div>
             <div class="form-group">
                 <div class="formCodePostal inputGroup">
                     <label for="codePostal">Code Postal</label>
-                    <input id="codePostal" type="text" name="codePostal" placeholder="Code postal" />
+                    <input formControlName="codePostal" id="codePostal" type="text" name="codePostal" placeholder="59000" />
                 </div>
                 <div class="formVille inputGroup">
                     <label for="ville">Ville</label>
-                    <input id="ville" type="text" name="ville" placeholder="Ville" />
+                    <input formControlName="ville" id="ville" type="text" name="ville" placeholder="Lille" />
                 </div>
             </div>
             <div class="form-group">
                 <div class="formSexe inputGroup">
                     <label for="sexe">Sexe</label>
-                    <select id="sexe" name="formSexe">
+                    <select formControlName="sexe" id="sexe" name="formSexe">
                         <option></option>
                         <option>M.</option>
                         <option>Mme.</option>
@@ -53,8 +53,11 @@
                 </div>
                 <div class="formNaissance inputGroup">
                     <label for="dateNaissance">Date de naissance</label>
-                    <input id="dateNaissance" type="text" name="dateNaissance" placeholder="Date de naissance" />
+                    <input formControlName="dateNaissance" id="dateNaissance" type="date" name="dateNaissance" placeholder="01/01/1970" />
                 </div>
+            </div>
+            <div class="form-group btn">
+                <button class="btnValider">Valider</button>
             </div>
         </form>
     </div>

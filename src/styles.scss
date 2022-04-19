@@ -23,27 +23,37 @@ body {
 
         app-navbar {
             grid-area: nav;
-            background-color: navy;
+            background-color: $navy;
             position: sticky;
         }
 
         main {
             grid-area: main;
 
-            h1 span{
+            h1 span {
                 color: $blue;
+            }
+
+            .btnValider {
+                width: 100px;
+                font-family: Roboto;
+                background-color: $navy;
+                border-radius: 30px;
+                color: white;
+                padding: 15px;
+                cursor: pointer;
             }
         }
 
         app-footer {
             grid-area: footer;
-            background-color: navy;
+            background-color: $navy;
             // position: sticky;
         }
 
         app-navbar,
         app-footer {
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-family: Roboto;
             color: white;
             font-weight: bold;
         }
