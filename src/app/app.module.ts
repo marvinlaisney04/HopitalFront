@@ -7,7 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { FichePatientComponent } from './fiche-patient/fiche-patient.component';
-import { NouveauPatientComponent } from './nouveau-patient/nouveau-patient.component';
+import { FormPatientComponent } from './form-patient/form-patient.component';
 import { PatientsComponent } from './patients/patients.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -18,7 +18,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     FooterComponent,
     HomeComponent,
     FichePatientComponent,
-    NouveauPatientComponent,
+    FormPatientComponent,
     PatientsComponent
   ],
   imports: [
