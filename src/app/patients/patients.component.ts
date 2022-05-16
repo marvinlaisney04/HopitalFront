@@ -14,6 +14,7 @@ export class PatientsComponent implements OnInit {
   }
 
   ajouterPatient() {
-    this.router.navigate(['/patients/new']);
+    this.router.navigate(['/creer-patient']);
+    console.log("coucou");
   }
 }
