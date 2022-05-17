@@ -8,7 +8,7 @@ const baseUrl = 'http://localhost:8080/personnel';
 @Injectable({
   providedIn: 'root'
 })
-export class PersonnelServiceService {
+export class PersonnelService {
 
   constructor(private http: HttpClient) { }
 
@@ -16,27 +16,27 @@ export class PersonnelServiceService {
     return this.http.get<Personnel[]>(baseUrl);
   }
 
-  get(id: any): Observable<Personnel> {
+  get(id: number): Observable<Personnel> {
     return this.http.get(`${baseUrl}/${id}`);
   }
 
-  create(data: any): Observable<any> {
+  create(data: Personnel): Observable<Object> {
     return this.http.post(baseUrl, data);
   }
 
-  update(id: any, data: any): Observable<any> {
+  update(id: number, data: Personnel): Observable<Object> {
     return this.http.put(`${baseUrl}/${id}`, data);
   }
 
-  delete(id: any): Observable<any> {
+  delete(id: number): Observable<Object> {
     return this.http.delete(`${baseUrl}/${id}`);
   }
 
-  deleteAll(): Observable<any> {
+  deleteAll(): Observable<Object> {
     return this.http.delete(baseUrl);
   }
 
-  // findByTitle(title: any): Observable<Patient[]> {
-  //   return this.http.get<Patient[]>(`${baseUrl}?title=${title}`);
+  // findByTitle(title: any): Observable<Personnel[]> {
+  //   return this.http.get<Personnel[]>(`${baseUrl}?title=${title}`);
   // }
 }

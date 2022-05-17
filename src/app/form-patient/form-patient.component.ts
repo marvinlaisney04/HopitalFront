@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Patient } from '../models/patient.model';
 
 @Component({
   selector: 'app-form-patient',
@@ -8,6 +9,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class FormPatientComponent implements OnInit {
 
+  @Input() patient!: Patient;
   formPatient!: FormGroup;
 
   constructor(private fb: FormBuilder) { }
