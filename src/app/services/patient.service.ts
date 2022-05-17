@@ -1,9 +1,24 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Patient } from '../models/patient.model';
 
-const baseUrl = 'http://localhost:8080/patient';
+const baseUrl = 'http://localhost:8080/api/patient';
+// const headerDict = {
+//   'Content-Type': 'application/json',
+//   'Accept': 'application/json',
+//   'Access-Control-Allow-Headers': 'Content-Type',
+// }
+
+// const requestOptions = {                                                                                                                                                                                 
+//   headers: new HttpHeaders(headerDict), 
+// };
+
+const optionRequete = {
+  headers: new HttpHeaders({ 
+    'Access-Control-Allow-Origin':'*'
+  })
+};
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +32,7 @@ export class PatientService {
   }
 
   get(id: number): Observable<Patient> {
-    return this.http.get(`${baseUrl}/${id}`);
+    return this.http.get(`${baseUrl}/${id}`, optionRequete);
   }
 
   create(data: Patient): Observable<Object> {

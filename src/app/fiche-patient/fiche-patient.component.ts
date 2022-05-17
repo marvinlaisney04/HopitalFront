@@ -21,9 +21,19 @@ export class FichePatientComponent implements OnInit {
 
     this.patient = new Patient();
     this.patientservice.get(this.id).subscribe( data => {
-      this.patient = data;
-    });
 
+    console.log("test", data);
+      this.patient = new Patient;
+      this.patient.nom = data.nom;
+      this.patient.prenom = data.prenom;
+      this.patient.adresse = data.adresse;
+      this.patient.telephone = data.telephone;
+      this.patient.sexe = data.sexe;
+      this.patient.age = data.age;
+      this.patient.dateNaissance = data.dateNaissance;
+      this.patient.numSecu = data.numSecu;
+    });
+    console.log(this.patient);
   }
 
 }
