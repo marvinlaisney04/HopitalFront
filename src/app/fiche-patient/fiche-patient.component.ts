@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { firstValueFrom } from 'rxjs';
 import { Patient } from '../models/patient.model';
 import { PatientService } from '../services/patient.service';
 
@@ -11,29 +12,24 @@ import { PatientService } from '../services/patient.service';
 export class FichePatientComponent implements OnInit {
 
   id!: number;
-  patient!: Patient;
+  patient = new Patient();
 
   constructor(private patientservice: PatientService, private route: ActivatedRoute,
     private router: Router) { }
 
-  ngOnInit(): void {
-    this.id = this.route.snapshot.params['id'];
-
-    this.patient = new Patient();
-    this.patientservice.get(this.id).subscribe( data => {
-
-    console.log("test", data);
-      this.patient = new Patient;
-      this.patient.nom = data.nom;
-      this.patient.prenom = data.prenom;
-      this.patient.adresse = data.adresse;
-      this.patient.telephone = data.telephone;
-      this.patient.sexe = data.sexe;
-      this.patient.age = data.age;
-      this.patient.dateNaissance = data.dateNaissance;
-      this.patient.numSecu = data.numSecu;
-    });
-    console.log(this.patient);
+  ngOnInit() {
+    this.getData();
   }
 
+  async getData() {
+    this.id = this.route.snapshot.params['id'];
+
+    // this.patientservice.get(this.id).subscribe((data: Patient) => {
+    //   this.patient = data;
+    // });
+
+    let data: Patient = await firstValueFrom(this.patientservice.get(this.id));
+    this.patient = data;
+
+  }
 }

@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Personnel } from '../models/personnel.model';
 
-const baseUrl = 'http://localhost:8080/api/personnel/';
+const baseUrl = 'http://localhost:8080/api/personnel';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +13,7 @@ export class PersonnelService {
   constructor(private http: HttpClient) { }
 
   getAll(): Observable<Personnel[]> {
-    return this.http.get<Personnel[]>(baseUrl);
+    return this.http.get<Personnel[]>(`${baseUrl}/`);
   }
 
   get(id: number): Observable<Personnel> {

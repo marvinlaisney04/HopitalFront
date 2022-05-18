@@ -5,7 +5,6 @@
     </div>
     <div class="container main-content">
         <form [formGroup]="formPatient" name="nouveauPatient" method="post">
-
             <div class="form-group">
                 <div class="formFirstName inputGroup">
                     <label for="firstName">Prénom</label>
@@ -19,23 +18,27 @@
             <div class="form-group">
                 <div class="formTelephone inputGroup">
                     <label for="telephone">Numéro de téléphone</label>
-                    <input formControlName="telephone" id="telephone" type="text" name="telephone" placeholder="0245693215" />
+                    <input formControlName="telephone" id="telephone" type="text" name="telephone"
+                        placeholder="0245693215" />
                 </div>
                 <div class="formNumSecu inputGroup">
                     <label for="numSecu">Numéro de sécurité sociale</label>
-                    <input formControlName="numSecu" id="numSecu" type="text" name="numSecu" placeholder="1 12 548 652 45 78 02" />
+                    <input formControlName="numSecu" id="numSecu" type="text" name="numSecu"
+                        placeholder="1 12 548 652 45 78 02" />
                 </div>
             </div>
             <div class="form-group">
                 <div class="formAdresse inputGroup">
                     <label for="adresse">Adresse</label>
-                    <input formControlName="adresse" id="adresse" type="text" name="adresse" placeholder="30 Place Saint Charles" />
+                    <input formControlName="adresse" id="adresse" type="text" name="adresse"
+                        placeholder="30 Place Saint Charles" />
                 </div>
             </div>
             <div class="form-group">
                 <div class="formCodePostal inputGroup">
                     <label for="codePostal">Code Postal</label>
-                    <input formControlName="codePostal" id="codePostal" type="text" name="codePostal" placeholder="59000" />
+                    <input formControlName="codePostal" id="codePostal" type="text" name="codePostal"
+                        placeholder="59000" />
                 </div>
                 <div class="formVille inputGroup">
                     <label for="ville">Ville</label>
@@ -47,13 +50,14 @@
                     <label for="sexe">Sexe</label>
                     <select formControlName="sexe" id="sexe" name="formSexe">
                         <option></option>
-                        <option>M.</option>
-                        <option>Mme.</option>
+                        <option value="M.">Monsieur</option>
+                        <option value="Mme.">Madame</option>
                     </select>
                 </div>
                 <div class="formNaissance inputGroup">
                     <label for="dateNaissance">Date de naissance</label>
-                    <input formControlName="dateNaissance" id="dateNaissance" type="date" name="dateNaissance" placeholder="01/01/1970" />
+                    <input formControlName="dateNaissance" id="dateNaissance" type="date" name="dateNaissance"
+                        placeholder="01/01/1970" />
                 </div>
             </div>
             <div class="form-group btn">
