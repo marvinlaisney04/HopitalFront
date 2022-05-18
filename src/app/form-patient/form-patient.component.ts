@@ -17,15 +17,15 @@ export class FormPatientComponent implements OnInit {
   ngOnInit(): void {
     console.log(this.patient);
     this.formPatient = this.fb.group({
-      firstName: '' || this.patient.prenom,
-      lastName: '' || this.patient.nom,
-      telephone: '' || this.patient.telephone,
-      numSecu: '' || this.patient.numSecu,
-      adresse: '' || this.patient.adresse,
-      codePostal: '',
-      ville: '',
+      firstName: this.patient.prenom,
+      lastName: this.patient.nom,
+      telephone: this.patient.telephone,
+      dateNaissance: this.patient.dateNaissance,
       sexe: [''],
-      dateNaissance: '' || this.patient.dateNaissance
+      adresse: this.patient.adresse,
+      codePostal: this.patient.codePostal,
+      ville: this.patient.ville,
+      numSecu: this.patient.numSecu
     })
   }
 

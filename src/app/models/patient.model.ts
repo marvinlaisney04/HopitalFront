@@ -4,6 +4,8 @@ export class Patient {
     prenom?: string;
     telephone?: string;
     adresse?: string;
+    codePostal?: string;
+    ville?: string;
     sexe?: string;
     age?: number;
     dateNaissance?: Date;
