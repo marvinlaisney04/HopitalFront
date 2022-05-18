@@ -30,10 +30,9 @@ export class FormPatientComponent implements OnInit {
 
   // wait for a specific cicle life func to fill form
   ngAfterViewChecked(): void {
-    
-    let formatedDateNaissance = this.formatDate(this.patient.dateNaissance!);
 
     if (!!Object.keys(this.patient).length) {
+      let formatedDateNaissance = this.formatDate(this.patient.dateNaissance!);
       this.formPatient = this.fb.group({
         firstName: this.patient.prenom || '',
         lastName: this.patient.nom || '',
