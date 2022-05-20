@@ -193,3 +193,19 @@
         }
     }
 }
+
+@media screen and (max-width:1024px) {
+    .app {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+
+        .header {
+
+            flex-wrap: wrap;
+            justify-content: center;
+            
+            // img {
+            //     width: 350px;
+            // }
+        }}
+}

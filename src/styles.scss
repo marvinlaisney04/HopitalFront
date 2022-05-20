@@ -115,7 +115,9 @@ body {
     }
 }
 
-// /* Medium Devices, Desktops */
-// @media only screen and (min-width : 992px) {
-
-// }
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 1024px) {
+    h1 {
+        width: auto;
+    }
+}
