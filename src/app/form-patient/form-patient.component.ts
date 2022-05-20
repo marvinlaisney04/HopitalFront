@@ -33,8 +33,11 @@ export class FormPatientComponent implements OnInit {
 
   // wait for a specific cicle life func to fill form
   ngAfterViewChecked(): void {
-
-    if (this.patient) {
+    /**
+     * TODO
+     * Revoir comment remplir le formulaire, form actuellement non modifiable après chargement des données
+     */
+    if (Object.keys(this.patient).length) {
       let formatedDateNaissance = this.formatDate(this.patient.dateNaissance!) || '';
       this.formPatient = this.fb.group({
         firstName: this.patient.prenom || '',
