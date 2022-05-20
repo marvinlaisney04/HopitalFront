@@ -15,7 +15,7 @@
             flex-direction: column;
             gap: 15px;
 
-            .form-group.btn{
+            .form-group.btn {
                 margin-top: 15px;
                 justify-content: center;
             }
@@ -27,12 +27,12 @@
                 gap: 25px;
                 width: 100%;
 
-                .inputGroup{
+                .inputGroup {
                     display: flex;
                     flex-direction: column;
                     gap: 5px;
 
-                    label{
+                    label {
                         font-family: Roboto;
                         color: #2D31FA;
                         font-weight: bold;
@@ -64,46 +64,42 @@
 @media only screen and (min-width : 768px) {
     .app {
         grid-template-columns: repeat(12, 1fr);
-        // grid-template-rows: 50px 250px 50px 1fr 50px;
-    
-        .header {
-    
-            img {
-                // width: 100%;
-            }
-        }
-    
+
         .main-content {
-    
+
             form {
                 display: flex;
                 gap: 15px;
                 grid-column: 1 / 13;
-    
+
                 .form-group {
                     grid-row: auto;
                     display: flex;
                     flex-direction: row;
                     gap: 25px;
                     width: 100%;
-    
+
                     .formFirstName,
                     .formLastName {
                         width: 50%;
                     }
-    
-                    .formTelephone, .formCodePostal, .formSexe {
+
+                    .formTelephone,
+                    .formCodePostal,
+                    .formSexe {
                         width: 40%;
                     }
-    
-                    .formNumSecu, .formVille, .formNaissance {
+
+                    .formNumSecu,
+                    .formVille,
+                    .formNaissance {
                         width: 60%;
                     }
-    
+
                     .formAdresse {
                         width: 100%;
                     }
-    
+
                     input,
                     select {
                         width: 100%;
@@ -115,7 +111,7 @@
                         border-right: 0px;
                         border-bottom: 5px solid #2D31FA;
                     }
-    
+
                     select {
                         height: 42px;
                     }
@@ -128,26 +124,24 @@
 @media screen and (max-width:768px) {
     .app {
         grid-template-columns: 1fr;
-        // grid-template-rows: 50px 450px 50px 1fr 50px;
         padding: 0 15px;
 
         .header {
-
             flex-wrap: wrap;
             justify-content: center;
-            
+
             img {
                 width: 350px;
             }
         }
-    
+
         .main-content {
 
             form {
                 display: flex;
                 gap: 15px;
                 grid-column: 1;
-    
+
                 .form-group {
                     grid-row: auto;
                     display: flex;
@@ -155,24 +149,28 @@
                     flex-direction: row;
                     gap: 25px;
                     width: 100%;
-    
+
                     .formFirstName,
                     .formLastName {
                         width: 100%;
                     }
-    
-                    .formTelephone, .formCodePostal, .formSexe {
+
+                    .formTelephone,
+                    .formCodePostal,
+                    .formSexe {
                         width: 100%;
                     }
-    
-                    .formNumSecu, .formVille, .formNaissance {
+
+                    .formNumSecu,
+                    .formVille,
+                    .formNaissance {
                         width: 100%;
                     }
-    
+
                     .formAdresse {
                         width: 100%;
                     }
-    
+
                     input,
                     select {
                         width: 100%;
@@ -184,7 +182,7 @@
                         border-right: 0px;
                         border-bottom: 5px solid #2D31FA;
                     }
-    
+
                     select {
                         height: 42px;
                     }
@@ -200,8 +198,8 @@
         padding: 0 15px;
 
         .header {
-
             flex-wrap: wrap;
             justify-content: center;
-        }}
+        }
+    }
 }
