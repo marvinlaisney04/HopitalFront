@@ -1,15 +1,10 @@
 .app {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 50px 250px 50px 1fr;
+    grid-template-rows: 50px auto 50px 1fr 50px;
 
     .header {
         grid-row: 2;
         display: flex;
-
-        img {
-            width: 100%;
-        }
     }
 
     .main-content {
@@ -18,9 +13,7 @@
         form {
             display: flex;
             flex-direction: column;
-            flex-wrap: wrap;
             gap: 15px;
-            grid-column: 1 / 13;
 
             .form-group.btn{
                 margin-top: 15px;
@@ -47,28 +40,12 @@
                     }
                 }
 
-                .formFirstName,
-                .formLastName {
-                    width: 50%;
-                }
-
-                .formTelephone, .formCodePostal, .formSexe {
-                    width: 40%;
-                }
-
-                .formNumSecu, .formVille, .formNaissance {
-                    width: 60%;
-                }
-
-                .formAdresse {
-                    width: 100%;
-                }
-
                 input,
                 select {
                     width: 100%;
                     background-color: white;
                     height: 35px;
+                    border-radius: 2px;
                     border-left: 0px;
                     border-top: 0px;
                     border-right: 0px;
@@ -77,6 +54,140 @@
 
                 select {
                     height: 42px;
+                }
+            }
+        }
+    }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 768px) {
+    .app {
+        grid-template-columns: repeat(12, 1fr);
+        // grid-template-rows: 50px 250px 50px 1fr 50px;
+    
+        .header {
+    
+            img {
+                // width: 100%;
+            }
+        }
+    
+        .main-content {
+    
+            form {
+                display: flex;
+                gap: 15px;
+                grid-column: 1 / 13;
+    
+                .form-group {
+                    grid-row: auto;
+                    display: flex;
+                    flex-direction: row;
+                    gap: 25px;
+                    width: 100%;
+    
+                    .formFirstName,
+                    .formLastName {
+                        width: 50%;
+                    }
+    
+                    .formTelephone, .formCodePostal, .formSexe {
+                        width: 40%;
+                    }
+    
+                    .formNumSecu, .formVille, .formNaissance {
+                        width: 60%;
+                    }
+    
+                    .formAdresse {
+                        width: 100%;
+                    }
+    
+                    input,
+                    select {
+                        width: 100%;
+                        background-color: white;
+                        height: 35px;
+                        border-radius: 2px;
+                        border-left: 0px;
+                        border-top: 0px;
+                        border-right: 0px;
+                        border-bottom: 5px solid #2D31FA;
+                    }
+    
+                    select {
+                        height: 42px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .app {
+        grid-template-columns: 1fr;
+        // grid-template-rows: 50px 450px 50px 1fr 50px;
+        padding: 0 15px;
+
+        .header {
+
+            flex-wrap: wrap;
+            justify-content: center;
+            
+            img {
+                width: 350px;
+            }
+        }
+    
+        .main-content {
+
+            form {
+                display: flex;
+                gap: 15px;
+                grid-column: 1;
+    
+                .form-group {
+                    grid-row: auto;
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: row;
+                    gap: 25px;
+                    width: 100%;
+    
+                    .formFirstName,
+                    .formLastName {
+                        width: 100%;
+                    }
+    
+                    .formTelephone, .formCodePostal, .formSexe {
+                        width: 100%;
+                    }
+    
+                    .formNumSecu, .formVille, .formNaissance {
+                        width: 100%;
+                    }
+    
+                    .formAdresse {
+                        width: 100%;
+                    }
+    
+                    input,
+                    select {
+                        width: 100%;
+                        background-color: white;
+                        height: 35px;
+                        border-radius: 2px;
+                        border-left: 0px;
+                        border-top: 0px;
+                        border-right: 0px;
+                        border-bottom: 5px solid #2D31FA;
+                    }
+    
+                    select {
+                        height: 42px;
+                    }
                 }
             }
         }

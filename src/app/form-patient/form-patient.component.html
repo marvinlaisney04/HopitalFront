@@ -1,7 +1,7 @@
 <div class="app">
     <div class="container header">
-        <h1>Créer un nouveau <span>patient</span></h1>
-        <img src="../../assets/images/nouveau_patient.svg" alt="Nouveau patient" />
+        <h1 [innerHTML] = "title"></h1>
+        <img [src]="imgUrl" [alt]="imgAlt" />
     </div>
     <div class="container main-content">
         <form [formGroup]="formPatient" name="nouveauPatient" method="post">

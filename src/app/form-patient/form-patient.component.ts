@@ -11,6 +11,9 @@ export class FormPatientComponent implements OnInit {
 
   @Input() patient!: Patient;
   formPatient!: FormGroup;
+  title: string = "Créer un nouveau <span>patient</span>";
+  imgUrl: string = "../../assets/images/nouveau_patient.svg";
+  imgAlt: string = "Nouveau Patient";
 
   constructor(private fb: FormBuilder) { }
 
@@ -44,6 +47,10 @@ export class FormPatientComponent implements OnInit {
         ville: this.patient.ville || '',
         numSecu: this.patient.numSecu || ''
       })
+
+      this.title = `Fiche Patient <span>${this.patient.prenom} ${this.patient.nom}</span>`;
+      this.imgUrl = "../../assets/images/fiche_patient.svg";
+      this.imgAlt = "Fiche Patient";
     }
   }
 
