@@ -37,7 +37,9 @@ export class FormPatientComponent implements OnInit {
      * TODO
      * Revoir comment remplir le formulaire, form actuellement non modifiable après chargement des données
      */
-    if (Object.keys(this.patient).length) {
+    // if (this.patient !== undefined) { return undefined; } // return undefined for undefined 
+    // if (this.patient !== null) { return null; } // null unchanged
+    if (this.patient !== undefined&& Object.keys(this.patient).length) {
       let formatedDateNaissance = this.formatDate(this.patient.dateNaissance!) || '';
       this.formPatient = this.fb.group({
         firstName: this.patient.prenom || '',
