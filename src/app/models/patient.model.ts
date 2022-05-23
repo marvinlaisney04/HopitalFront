@@ -10,4 +10,5 @@ export class Patient {
     age?: number;
     dateNaissance?: Date;
     numSecu?: number;
+    actif?: boolean;
 }

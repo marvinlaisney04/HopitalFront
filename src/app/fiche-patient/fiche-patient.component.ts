@@ -19,6 +19,7 @@ export class FichePatientComponent implements OnInit {
 
   ngOnInit() {
     this.getData();
+    // console.log("test", this.id); work
   }
 
   async getData() {
